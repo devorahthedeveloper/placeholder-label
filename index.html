@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Placeholder polyfill</title>
+	<style type="text/css">
+
+	</style>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,900,800,700,600,500,300,200,100' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/prism.css" type="text/css" />
+	<link rel="stylesheet" href="assets/placeholder-label.css" type="text/css" />
+	
+</head>
+<body>
+	<div class="wrap">
+		
+	<h1>Placeholder label</h1>
+	<p>Placeholder label is a custom <code class="inline">placeholder</code> polyfill I wrote for use on the FXCM websites. It uses the <code class="inline">label</code> element as stand-in for the placeholder and works by absolutely positioning each <code class="inline">label</code> over its associated <code class="inline">input</code>, showing and hiding the <code class="inline">label</code> at the appropriate time.</p>
+	<h3>Native placeholder support</h3>
+	<p> You can override native <code class="inline">placeholder</code> support and force placeholder-label to invoke for all situations by setting  <code class="inline">overrideNative</code> to true. By default, however, <code class="inline">overrideNative</code> is set to false and the plugin will exit silently if it detects native <code class="inline">placeholder</code> support.</p>
+	<h3>Select menus</h3>
+	<p>This plugin also includes optional support for <code class="inline">&lt;select&gt;</code> menus by dynamically inserting an <code class="inline">option</code> first-child whose text is that of the label element.</p>
+	<h3>Usage scenarios</h3>
+	<p>Since this plugin was designed specifically for use within the FXCM ecosystem, it relies upon specific DOM structure (the <code class="inline">label</code> and <code class="inline">input</code> must either be direct siblings or wrapped with a specified wrapper element).</p>
+	<h3>Background</h3>
+	<p>I developed this plugin...</p>
+	<h3>Example usage</h3>
+	<p>You can see this plugin in action on this <a href="http://www.fxcm.com/forms/missing-information-request/">FXCM form</a>.</p>
+
+	<h2>Demo:</h2>
+	<form action="" method="">
+		<div class="form-group">
+			<label for="firstName">First Name</label>
+			<input type="text" name="firstName" id="firstName" placeholder="first name">
+		</div>
+		<div class="form-group">
+			<label for="lastName">Last Name</label>
+			<input type="text" name="lastName" id="lastName" placeholder="last name">
+		</div>
+		<div class="form-group">
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email" placeholder="email address">
+		</div>
+		<div class="form-group">
+			<label for="color">Color</label>
+			<select name="color" id="color">
+				<option value="">Please choose</option>
+				<option value="red">red</option>
+				<option value="green">green</option>
+				<option value="blue">blue</option>
+			</select>
+		</div>
+	</form>
+
+	<h2>Usage</h2>
+	<p>
+<pre><code class=
+	'language-javascript'>new PlaceholderLabel({ element: $('form'), overrideNative: true });</code></pre>	
+	</p>
+
+	<div class="branding">Brought to you by <a href="http://devorahthedeveloper.github.io">Devorah</a> <span class="copyright">&copy; 2015</span> </div>
+</div>
+
+	<script type="text/javascript" src="assets/jquery.js"></script>
+	<script type="text/javascript" src="assets/prism.js"></script>
+	<script type="text/javascript" src="assets/placeholder-label.js"></script>
+	<script type="text/javascript">
+	new PlaceholderLabel({
+		element: $('form'),
+		wrapperElement: $('.form-group'),
+		overrideNative: true,
+		wrapInputs: true
+	});
+	</script>
+</body>
+</html>

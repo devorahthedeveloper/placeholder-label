@@ -1,0 +1,118 @@
+*,
+:before,
+:after{-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+
+html { 
+	font-size: 100%; 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%; 
+}
+/*html, 
+button, 
+input, 
+select, 
+textarea { 
+	font-family: Arial, sans-serif;
+	color: #222;
+}
+*/body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color:#000;
+	background-color:#eee;
+	font-size: 16px;
+	font-size: 1em; /* 16 / 16 */
+	line-height: 24px;
+	line-height: 1.5rem; /* 24 / 16 */ 
+}
+.wrap {
+	max-width:60rem;
+	margin: auto;
+	padding: 2rem 3rem;
+	background-color: #fff;
+}
+
+h1, 
+h2,
+h3,
+h4 {
+	font-family:'Lato', sans-serif;
+	margin:1em 0 0;
+}
+h1 {
+	font-size:3rem;
+	margin:.25em 0 .2em;
+}
+code.inline {
+	font-size:120%;
+	padding:.1em .3em;
+	background-color: #eee;
+	border-radius: 3px;
+}
+form {
+	width:350px;
+}
+input, select {
+	display:block;
+	width:100%;
+	font-size:14px;
+	border:1px solid #ccc;
+	padding: 8px 5px;
+	margin:1em 0;
+	vertical-align: baseline;
+}
+
+select {
+	-webkit-appearance:none;
+	background-color:#fff;
+	border-radius:0;
+	background-image:url('ios-select-down.png');
+	background-repeat:no-repeat;
+	background-position:right center;
+}
+.pl_wrap {
+	position: relative;
+}
+.pl_label {
+	color:#bbb;
+	font-size:1rem;
+}
+label.pl_label {
+	position: absolute;
+	left:.5rem;
+	top:.45rem;
+}
+
+
+/* ------- Reset for Apple browsers ------- */
+body[data-os="ios"] .field,
+body[data-os="macintosh"] .field,
+body[data-os="ios"] .submit,
+body[data-os="macintosh"] .submit{
+	-webkit-appearance:none;
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(hsla(0,0%,100%,0)), to(hsla(0,0%,100%,0)));
+	background-image:-webkit-linear-gradient(hsla(0,0%,100%,0), hsla(0,0%,100%,0));
+}
+body[data-os="ios"] .field.select,
+body[data-os="macintosh"] .field.select{
+	background-image:url('ios-select-down.png');
+	background-repeat:no-repeat;
+	background-position:right center;
+}
+body[data-os="ios"] .std_error .field.invalid,
+body[data-os="macintosh"] .std_error .field.invalid{
+	-webkit-appearance:none;
+	background:#f8d37a !important;
+	border:1px solid #8c9bac !important;
+	box-shadow:none !important;
+	background-image:none;
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(hsla(0,0%,100%,0)), to(hsla(0,0%,100%,0)));
+	background-image:-webkit-linear-gradient(hsla(0,0%,100%,0), hsla(0,0%,100%,0));
+}
+body[data-os="ios"] .std_error .field.select.invalid,
+body[data-os="macintosh"] .std_error .field.select.invalid{
+	background-image:url('/responsive/img/module/form/ios-select-down.png') !important;
+	background-repeat:no-repeat !important;
+	background-position:right center !important;
+}
+/**/
