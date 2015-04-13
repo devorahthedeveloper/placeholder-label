@@ -1,0 +1,1 @@
+Placeholder label is a custom `placeholder` polyfill I wrote for use on the FXCM websites. It uses the `label` element as stand-in for the placeholder and works by absolutely positioning each `label` over its associated `input`, showing and hiding the `label` at the appropriate time.
